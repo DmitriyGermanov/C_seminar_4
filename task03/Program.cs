@@ -10,7 +10,7 @@ int Promt(string message) // создаем метод для печати
     return num;
 }
 
-int[] Fill(int[] a)
+int[] Fill(int[] a) //Заполняем массив
 {
     for (int i = 0; i < a.Length; i++)
     {
@@ -18,7 +18,7 @@ int[] Fill(int[] a)
     }
     return a;
 }
-void PrintMass(int[] a)
+void PrintMass(int[] a) //Печатаем массив
 {
     for (int i = 0; i < a.Length; i++)
     {
@@ -26,6 +26,8 @@ void PrintMass(int[] a)
     }
 }
 
-int N = Promt("Введите длину массива: ");
-int[] array = new int[N];
-PrintMass(Fill(array));
+int N = Promt("Введите длину массива: "); //Запрашиваем у пользователя длину массива
+
+int[] array = new int[N]; //Инициализация массива по его длине заполненого 0;
+
+PrintMass(Fill(array));//Вызываем функцию заполнения массива внутри функции печати
